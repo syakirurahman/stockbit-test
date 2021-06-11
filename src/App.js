@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import './assets/scss/default.scss';
+import AppHeader from 'components/AppHeader';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Anagram from 'pages/Anagram';
+import OMDBApp from 'pages/OMDBApp';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Route exact path="/">
+          <h1>Choose app</h1>
+          <Link to="/anagram">Anagram Test</Link>
+          <br/>
+          <Link to="/omdb-app">OMDB App</Link>
+        </Route>
+        <Route component={Anagram} path="/anagram"/>
+        <Route component={OMDBApp} path="/omdb-app"/>
+      </Router>
     </div>
   );
 }

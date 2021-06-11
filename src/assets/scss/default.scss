@@ -1,0 +1,91 @@
+@import './../../assets/scss/variables.scss';
+
+/* Reset CSS & Default Styles
+  ========================================================================== */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box
+}
+body {
+  padding:0;
+  margin:0;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $textGrey;
+  @media(max-width: 576px) {
+//    font-size:14px;
+  }
+}
+a,a:link, a:not(.btn) {
+  color:$textBlack;
+}
+a:hover {
+  color:$primary
+}
+p {
+  margin-top: 0;
+  margin-bottom:15px;
+  a {
+    text-decoration: underline;
+  }
+}
+ul, ol {
+  padding-left: 25px;
+}
+h1,h2,h3,h4 {
+  color: $textBlack;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+img {
+  max-width: 100%!important;
+  height:auto;
+}
+
+.btn {
+  padding:15px 20px;
+  outline: 0;
+  display: inline-block;
+  border-radius: 10px;
+  border:0;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: inherit;
+  &.btn-primary {
+    background-color: $primary;
+    color:#000;
+  }
+  &.btn-fullwidth {
+    width:100%;
+  }
+}
+
+/* App layout */
+.app-wrapper {
+  min-height: 100vh;
+  position:relative;
+  padding-bottom: 100px;
+}
+.app-content {
+  padding:15px;
+  max-width:500px;
+  margin:0 auto;
+  .page-content, .main-content {
+    position:relative;
+  }
+}
+
+/* Reusable Style */
+
+.box {
+  background-color: #fff;
+  padding:20px;
+  &.rounded {
+    border-radius:15px;
+  }
+  &.shadowed {
+    box-shadow: 0 3px 28px 0 rgba(#000, .08);
+  }
+}
