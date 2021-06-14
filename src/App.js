@@ -1,5 +1,4 @@
 import './assets/scss/default.scss';
-import AppHeader from 'components/AppHeader';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Anagram from 'pages/Anagram';
 import OMDBApp from 'pages/OMDBApp';

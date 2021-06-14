@@ -1,24 +1,18 @@
 import React from 'react'
-import { Switch, Route, Link, useRouteMatch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom'
 import AppHeader from './../../components/AppHeader'
-import Movies from './Movies';
+import Movies from './Movies'
+import MovieDetail from './MovieDetail'
 
 export default class OMDBApp extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  componentDidMount() {
-    console.log(this.props)
-  }
   render() {
-//    let { path, url } = useRouteMatch();
     return (
       <div className="app-wrapper">
         <AppHeader title="OMDBApp"/>
         <div className="app-content">
           <Switch>
-            <Route component={Movies} exact/>
+            <Route component={Movies} path={this.props.match.path} exact/>
+            <Route component={MovieDetail} path={this.props.match.path+"/movie/:id"} exact/>
           </Switch>
         </div>
       </div>

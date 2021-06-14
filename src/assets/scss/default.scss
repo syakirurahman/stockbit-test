@@ -44,6 +44,13 @@ img {
   height:auto;
 }
 
+input[type="text"], input[type="email"], input[type="url"], textarea, select {
+  padding:10px;
+  width:100%;
+  border-radius:5px;
+  border:1px solid #ddd;
+}
+
 .btn {
   padding:15px 20px;
   outline: 0;
@@ -70,11 +77,8 @@ img {
 }
 .app-content {
   padding:15px;
-  max-width:500px;
+  max-width:750px;
   margin:0 auto;
-  .page-content, .main-content {
-    position:relative;
-  }
 }
 
 /* Reusable Style */

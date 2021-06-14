@@ -18,7 +18,6 @@ export default class Anagram extends React.Component {
       for (let char of word1 ){ 
         if (!word2.includes(char)) {
           return false
-          break;
         }
       }
       return true;
